@@ -82,3 +82,12 @@ resource "aws_instance" "Shiny_instance" {
     associated_vpc = aws_vpc.Shiny.id
   }
 }
+
+resource "aws_s3_bucket" "shiny_bucket" {
+  bucket = "susmitha-devops9-bucket-2026"
+
+  tags = {
+    Name        = "Shiny_Bucket"
+    Environment = "Dev"
+  }
+}
